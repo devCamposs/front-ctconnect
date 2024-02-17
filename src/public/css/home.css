@@ -1,0 +1,96 @@
+html {
+    background-color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 95%;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+header .log img {
+    width: 250px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: rgb(255, 145, 0);
+}
+
+main {
+    display: flex;
+    width: 95%;
+}
+
+section {
+    width: 50%;
+    margin: 0;
+    padding: 10px;
+}
+
+#princial-titilo {
+    text-align: center; /* Adiciona centralização de texto */
+}
+
+#princial-titilo h1 {
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+}
+
+section img {
+    width: 100%;
+    height: auto;
+}
+
+.acao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Ajuste conforme necessário para posicionar mais para baixo */
+}
+
+.acao a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Adiciona centralização horizontal dentro do link */
+}
+
+.acao img {
+    width: 45%; /* Ajuste conforme necessário para diminuir o tamanho */
+    height: auto;
+    max-width: 100%; /* Adiciona para garantir que a largura não ultrapasse o contêiner */
+}
+
+footer {
+    width: 95%;
+    margin: 20px 0;
+    border: 1px solid red;
+    padding: 10px;
+}
