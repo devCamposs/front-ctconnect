@@ -91,6 +91,7 @@ section img {
 footer {
     width: 95%;
     margin: 20px 0;
-    border: 1px solid red;
+    border: 1.5px solid gray;
     padding: 10px;
+    border-radius: 4px;
 }
