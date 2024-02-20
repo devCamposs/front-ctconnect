@@ -1,0 +1,132 @@
+<!-------------------------------------------------------------------------
+NOME..: contato.ejs
+LANG..: ejs
+TITULO: Módulo do programa responsavel pela página contato
+DATA..: 18/02/2024
+-------------------------------------------------------------------------
+Copyright (c) 2024 - CTConnect+ - Thomas Campos
+-------------------------------------------------------------------------
+Modifications.....:
+Date          Rev    Author            Description
+18/02/2024    0      Thomas Campos     Elaboração
+--------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contato.css">
+    <title>CT Connet+</title>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+        <main class="main-container">
+            <form id="myForm">
+                <h2><strong><span style="color: rgb(255, 132, 0);">Venha fazer parte <br> do nosso time!</span></strong></h2>
+                <label for="name">Nome</label><br>
+                <input type="text" id="name" name="name" required>
+                <span id="nameError" class="error"></span>
+                <br>
+
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" required>
+                <span id="emailError" class="error"></span>
+                <br>
+
+                <label for="phone">Telefone</label><br>
+                <input type="text" id="phone" name="phone" required>
+                <span id="phoneError" class="error"></span>
+                <br><br>
+
+                <label for="message">Nós conte sua ideia para que possamos Atende-lo conforme suas ideias</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <span id="messageError" class="error"></span>
+                <br>
+
+                <input type="submit" onclick="submitPost()" value="Faça seu orçamento">
+            </form>
+        </main>
+
+        <%- include('./partials/footer') %>
+
+            <script>
+                document.getElementById("myForm").addEventListener("submit", function (event) {
+                    // Resetar mensagens de erro
+                    document.getElementById("nameError").innerHTML = "";
+                    document.getElementById("emailError").innerHTML = "";
+                    document.getElementById("phoneError").innerHTML = "";
+
+                    // Validar nome (pelo menos 2 letras)
+                    const nameInput = document.getElementById("name");
+                    if (nameInput.value.length < 3) {
+                        document.getElementById("nameError").innerHTML = "Nome deve ter pelo menos 2 letras";
+                        event.preventDefault(); // Impede o envio do formulário
+                    }
+
+                    // Validar email
+                    const emailInput = document.getElementById("email");
+                    if (!isValidEmail(emailInput.value)) {
+                        document.getElementById("emailError").innerHTML = "Email inválido";
+                        event.preventDefault();
+                    }
+
+                    // Validar telefone (DDD + 9 dígitos)
+                    const phoneInput = document.getElementById("phone");
+                    if (!isValidPhoneNumber(phoneInput.value)) {
+                        document.getElementById("phoneError").innerHTML = "Telefone inválido";
+                        event.preventDefault();
+                    }
+                });
+
+                function isValidEmail(email) {
+                    // Utilize aqui uma lógica mais robusta para validar o email
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(email);
+                }
+
+                function isValidPhoneNumber(phone) {
+                    // Utilize aqui uma lógica mais robusta para validar o telefone
+                    const phoneRegex = /^\d{2}\d{9}$/; // Exemplo: DDD + 9 dígitos
+                    return phoneRegex.test(phone);
+                }
+
+                /* Jefferson passou para pegar os valores que eu quero enviar dentro do postDAta e faz o featc para api*/
+                function submitPost() {
+                    var title = document.getElementById("postTitle").value;
+                    var content = document.getElementById("postContent").value;
+
+                    var postData = {
+                        title: title,
+                        content: content
+                    };
+
+                    fetch('https://example.com/api/posts', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(postData)
+                    })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log('Post created:', data);
+                            // Aqui você pode adicionar lógica para manipular a resposta do servidor, se necessário.
+                        })
+                        .catch(error => {
+                            console.error('There was a problem with the fetch operation:', error);
+                        });
+                }
+            </script>
+
+</body>
+
+</html>

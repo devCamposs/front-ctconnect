@@ -1,12 +1,18 @@
 html {
     background-color: black;
+    font-family: 'Arial', sans-serif;
 }
 
-body {
+#bodyMain {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+main{
     color: white;
     font-family: 'Arial', sans-serif;
 }
@@ -16,9 +22,10 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    width: 95%;
-    margin: 20px 0;
+    width: 97%;
+    margin: 5px 0;
     padding: 10px;
+    height: 75px;
 }
 
 header .log img {
@@ -88,10 +95,55 @@ section img {
     max-width: 100%; /* Adiciona para garantir que a largura não ultrapasse o contêiner */
 }
 
+
+/* =============== FOOTER =============*/
+
+
 footer {
-    width: 95%;
-    margin: 20px 0;
-    border: 1.5px solid gray;
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
     padding: 10px;
-    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid gray;
+    height: 10rem;
+    margin-bottom: 45px;
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px; /* Ajuste o tamanho conforme necessário */
+}
+
+.social-icons img {
+    width: 30px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.footer-esquerda{
+    width: 50%;
+    padding: 10px;
+}
+.footer-direita{
+    width: 50%;
+    padding: 15px;
+}
+
+.footer-links a {
+    display: block; /* Garante que os links fiquem em blocos verticais */
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px; /* Espaçamento vertical entre os links */
 }

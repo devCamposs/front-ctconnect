@@ -9,33 +9,19 @@ Copyright (c) 2024 - CTConnect+ - Thomas Campos
 Modifications.....:
 Date          Rev    Author            Description
 17/02/2024    0      Thomas Campos     Elaboração
+18/02/2024    1      Thomas Campos     Adicionado Include Head e Footer
 ------------------------------------------------------------------------>
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/home.css">
     <title>CT Connet+</title>
 </head>
-
-<body>
-    <header>
-        <div class="log">
-            <img src="/img/logoPrincipal.jpg" alt="logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/home">Início</a></li>
-                <li><a href="#">Sites</a></li>
-                <li><a href="/socialMidia">Social Mídia</a></li>
-                <li><a href="#">Identidade Visual</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<body id="boydMain">
+    <%- include('./partials/header') %>
     <main>
         <section id="quem-somos">
             <div>
@@ -60,9 +46,9 @@ Date          Rev    Author            Description
         </section>
 
     </main>
-    <footer>
 
-    </footer>
+    <%- include('./partials/footer') %>
+
 </body>
 
 </html>

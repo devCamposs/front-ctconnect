@@ -1,24 +1,23 @@
 /*
 -------------------------------------------------------------------------
-NOME..: socialMidia.js
+NOME..: idVisual.js
 LANG..: nodeJS
-TITULO: Modulo de roda da página de Social Mídia
-DATA..: 17/02/2024
+TITULO: Modulo de roda da página de identidade visual
+DATA..: 18/02/2024
 -------------------------------------------------------------------------
 Copyright (c) 2024 - CTConnect+ - Thomas Campos
 -------------------------------------------------------------------------
 Modifications.....:
 Date          Rev    Author            Description
-17/02/2024    0      Thomas Campos     Elaboração
-18/02/2024    1      Thomas Campos     Adicionado controle de versão
+18/02/2024    0      Thomas Campos     Elaboração
 ---------------------------------------------------------------------------
 */
 
 const express = require('express');
 const router = express.Router();
 
-const socialMidiaController = require('../controller/socialMidiaController');
+const idVisualController = require('../controller/idVisualController');
 
-router.get('/', socialMidiaController.index);
+router.get('/', idVisualController.index);
 
 module.exports = router;

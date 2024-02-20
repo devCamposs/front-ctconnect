@@ -1,7 +1,7 @@
 /*
-NOME..: socialMidia.css
+NOME..: idVisual.css
 LANG..: css
-TITULO: Módulo do programa responsavel pelo estilo da pa
+TITULO: Módulo do programa responsavel pelo estilo da página identidade visual
 DATA..: 17/02/2024
 -------------------------------------------------------------------------
 Copyright (c) 2024 - CTConnect+ - Thomas Campos
@@ -11,12 +11,13 @@ Date          Rev    Author            Description
 17/02/2024    0      Thomas Campos     Elaboração
 --------------------------------------------------------------------------
 */
+
 html {
     background-color: black;
     font-family: 'Arial', sans-serif;
 }
 
-body {
+#bodyIdVisual {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +27,6 @@ body {
     background-image: url('../img/backgroud.jpg');
     background-size: cover;
     background-position: center;
-    /* height: 100vh; */
     height:100%;
     background-repeat: no-repeat;
     background-attachment:fixed;
@@ -146,10 +146,55 @@ main {
     text-align: center;
 }
 
+
+/* =============== FOOTER =============*/
+
+
 footer {
-    width: 95%;
-    margin: 20px 0;
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
     border: 1.5px solid gray;
+    height: 10rem;
+    margin-bottom: 45px;
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px; /* Ajuste o tamanho conforme necessário */
+}
+
+.social-icons img {
+    width: 30px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.footer-esquerda{
+    width: 50%;
     padding: 10px;
-    border-radius: 4px;
+}
+.footer-direita{
+    width: 50%;
+    padding: 15px;
+}
+
+.footer-links a {
+    display: block; /* Garante que os links fiquem em blocos verticais */
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px; /* Espaçamento vertical entre os links */
 }
