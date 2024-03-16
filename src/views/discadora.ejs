@@ -1,0 +1,61 @@
+<!-------------------------------------------------------------------------
+NOME..: socialMidia.ejs
+LANG..: ejs
+TITULO: Módulo do programa responsavel pela página Social Mídia
+DATA..: 18/02/2024
+-------------------------------------------------------------------------
+Copyright (c) 2024 - CTConnect+ - Thomas Campos
+-------------------------------------------------------------------------
+Modifications.....:
+Date          Rev    Author            Description
+18/02/2024    0      Thomas Campos     Elaboração
+19/02/2024    1      Thomas Campos     Adicionado partials head e header
+16/03/2024    2      Thomas Campos     Adicionado planos de discadora.
+--------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+    <main>
+        <section id="gestao">
+            <h1 id="princial-titilo">Disparo de <span style="color: rgb(255, 132, 0);"> Ligações Simuntâneas</span></h1>
+            <div class="principalCards">
+                <div class="cards 1">
+                    <img src="" alt="">
+                    <h2>Bína Inteligente</h2>
+                    <hr>
+                    <p><strong>0,07 MINUTO</strong><br><br>
+                        Discara números aleatórios <br> com o DDD do destinatario<br><br>
+                        &nbsp;&bull; 20 Ramais inclusos.<br> &nbsp;&bull; +100 chamadas simuntâneas. <br> &nbsp;&bull; Acompanhar ligações ao vivo <br> de sua equipe. <br> &nbsp;&bull;Gravações de ligações de sua equipe. <br> &nbsp;&bull; Painel para acompanhar saldo. <br> &nbsp;&bull; Suporte ao cliente de seg a sexta das 9:00 as 18:00. <br> &nbsp;&bull; Sábado das 9:00 as 13:00.</p>
+                </div>
+                <div class="cards">
+                    <img src="" alt="">
+                    <h2>Bína Aberta</h2>
+                    <hr>
+                    <p><strong>0,09 MINUTO</strong><br><br>
+                        Binará numero de sua escolha ou similar. <br><br>
+                        &nbsp;&bull; 20 Ramais inclusos.<br> &nbsp;&bull; +100 chamadas simuntâneas. <br> &nbsp;&bull; Acompanhar ligações ao vivo <br> de sua equipe. <br> &nbsp;&bull;Gravações de ligações de sua equipe. <br> &nbsp;&bull; Painel para acompanhar saldo. <br> &nbsp;&bull; Suporte ao cliente de seg a sexta das 9:00 as 18:00. <br> &nbsp;&bull; Sábado das 9:00 as 13:00.</p>
+                </div>
+                <div class="cards 2">
+                    <img src="" alt="">
+                    <h2>Personalisado</h2>
+                    <hr>
+                    <p> Cada ramal a mais alem dos 20 inclusos <br>
+                    cada Ramal saira por R$15,00 o mês</p>
+
+                </div>
+            </div><hr>
+        </section>
+    </main>
+
+    <%- include('./partials/footer') %>
+
+</body>
+
+</html>

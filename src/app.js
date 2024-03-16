@@ -20,8 +20,8 @@ const path = require('path')
 const app = express()
 
 const indexRouter = require('./routes/index')
-const socialMidiaRouter = require('./routes/socialMidia')
-const idVisualRouter = require('./routes/idVisual')
+const discadoraRouter = require('./routes/discadora')
+const smsController = require('./routes/sms')
 const contatoRouter = require('./routes/contato')
 
 app.set('views', path.join(__dirname, 'views'))
@@ -29,8 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.set('view engine', 'ejs')
 
 app.use('/home', indexRouter)
-app.use('/socialMidia', socialMidiaRouter)
-app.use('/identidadeVisual', idVisualRouter)
+app.use('/socialMidia', discadoraRouter)
+app.use('/identidadeVisual', smsController)
 app.use('/contato', contatoRouter)
 
 app.listen(Number(process.env.PORT) || 3333, '0.0.0.0', () => {

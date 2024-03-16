@@ -1,6 +1,6 @@
 /*
 -------------------------------------------------------------------------
-NOME..: socialMidiaConroller.js
+NOME..: discadoraController.js
 LANG..: nodeJS
 TITULO: Modulo controller da página social mídia
 DATA..: 17/02/2024
@@ -15,10 +15,10 @@ Date          Rev    Author            Description
 
 const path = require('path')
 
-const socialMidiaConroller = {
+const discadoraController = {
     index: (req, res) => {
-        res.render('socialMidia')
+        res.render('discadora')
     }
 }
 
-module.exports = socialMidiaConroller
+module.exports = discadoraController
